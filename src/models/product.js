@@ -31,5 +31,5 @@ const Product = sequelize.define('Product', {
  
 // Relación de muchos a muchos entre facturas 
 Product.belongsToMany(Invoice, { through: 'InvoiceProducts' });
- 
+
 module.exports = Product;
