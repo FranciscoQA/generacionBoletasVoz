@@ -7,4 +7,4 @@ const InvoiceProducts = require('./invoiceProducts');
 Invoice.belongsToMany(Product, { through: 'InvoiceProducts' });
 Product.belongsToMany(Invoice, { through: 'InvoiceProducts' });
  
-module.exports = { sequelize,Invoice, Product,InvoiceProducts };
+module.exports = { sequelize, Product, Invoice ,InvoiceProducts };

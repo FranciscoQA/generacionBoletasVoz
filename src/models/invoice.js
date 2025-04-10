@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Product = require ('./product'); // importar el modelo Product para la relacion
+
+
 let invoiceCounter = 0; // Contador simple para generar IDs
  
 const Invoice = sequelize.define('Invoice', {
@@ -25,6 +26,7 @@ const Invoice = sequelize.define('Invoice', {
     tableName:'Invoices',
     timestamps: true, // Agrega automáticamente createdAt y updatedAt
 });
- // relacion de muchos a muchos con productos
- Invoice.belongsToMany(Product,{through:'InvoiceProducts'});
+
+ 
+
 module.exports = Invoice;

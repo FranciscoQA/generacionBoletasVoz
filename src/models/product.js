@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const Invoice = require('./invoice'); // Asegurate de importar el modelo Invoce
+
 let productCounter = 0;
  
 const Product = sequelize.define('Product', {
@@ -30,6 +30,5 @@ const Product = sequelize.define('Product', {
 });
  
 // Relación de muchos a muchos entre facturas 
-Product.belongsToMany(Invoice, { through: 'InvoiceProducts' });
 
 module.exports = Product;
