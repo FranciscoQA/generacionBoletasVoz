@@ -1,9 +1,33 @@
-exports.syncWithSunat = async (invoiceData) => {
-    // Aquí iría la lógica para conectarse con la API de SUNAT
-    // Simulación de respuesta
-    return {
-        status: 'success',
-        message: 'Boleta/Factura sincronizada con SUNAT',
-        sunatCode: '123456789'
-    };
+const axios = require('axios');
+ 
+const getClientData = async (rucOrDni) => {
+  try {
+    const response = await axios.get(`${process.env.SUNAT_API_URL}/consulta/${rucOrDni}`, {
+      headers: { 'Authorization': `Bearer ${process.env.SUNAT_API_KEY}` },
+    });
+ 
+    if (response.status === 200) {
+      return response.data; // Datos del cliente desde SUNAT
+    }
+ 
+    return null;
+  } catch (error) {
+    console.error('Error al consultar SUNAT:', error.message);
+    return null;
+  }
 };
+ 
+const syncInvoiceToSunat = async (invoiceData) => {
+  try {
+    const response = await axios.post(`${process.env.SUNAT_API_URL}/sync`, invoiceData, {
+      headers: { 'Authorization': `Bearer ${process.env.SUNAT_API_KEY}` },
+    });
+ 
+    return response.data; // Respuesta de sincronización con SUNAT
+  } catch (error) {
+    console.error('Error al sincronizar con SUNAT:', error.message);
+    throw new Error('Error al sincronizar la factura con SUNAT.');
+  }
+};
+ 
+module.exports = { getClientData, syncInvoiceToSunat };

@@ -12,9 +12,11 @@ app.use(cors());
 // Rutas
 const invoiceRoutes = require('./routes/invoiceRoutes');
 const productRoutes = require('./routes/productRoutes');
+const sunatSyncRoutes = require('./routes/sunatSyncRoutes');
 
 app.use('/api/invoices', invoiceRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/sunat-sync', sunatSyncRoutes);
 
 
 const { sequelize } = require('./models');
