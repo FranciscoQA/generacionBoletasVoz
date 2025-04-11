@@ -1,5 +1,4 @@
-const Invoice = require('../models/invoice');
-const Product = require('../models/product');
+const {Invoice , Product} = require('../models');
  
 // controlador para crear una factura
 exports.createInvoice = async (req, res) => {

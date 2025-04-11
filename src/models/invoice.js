@@ -27,6 +27,4 @@ const Invoice = sequelize.define('Invoice', {
     timestamps: true, // Agrega automáticamente createdAt y updatedAt
 });
 
- 
-
 module.exports = Invoice;

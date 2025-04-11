@@ -28,7 +28,5 @@ const Product = sequelize.define('Product', {
     tableName:'Products',
     timestamps: true,
 });
- 
-// Relación de muchos a muchos entre facturas 
 
 module.exports = Product;
