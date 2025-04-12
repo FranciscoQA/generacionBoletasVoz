@@ -11,5 +11,6 @@ const syncDatabase = async () => {
         console.error('Error al sincronizar las tablas:', err);
     }
 };
- 
+
+
 syncDatabase();
