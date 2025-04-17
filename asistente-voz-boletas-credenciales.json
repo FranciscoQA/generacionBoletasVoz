@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "asistente-voz-boletas",
+  "private_key_id": "ae21d0f5f9d0b8998b4f7b69106e66e60fc352cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQSYnlG36kGBXL\njjXiI1K+fh2dV4u2Eiv//+5GFVzoJ+Wba4WBBZoEFLt5F5v/NVuuEDVsDS8c236n\nz3D324jIwUgh8leIlL5SYvVJVMhW0o76Bi07mfNBGYaDdUNhO7JLmCPW1fYjEguF\nWPdOs9yZAcwyLZuQXhAwzPVl/MXGN09GzhbWa9zGZ3I6IcLNh6Y5x2RaHGus/ynL\nFn2Oqy2NlCTCVZ2U2GjuQxTA7GlnPZF8BvASe5xUz53TN26IDhwVhWOG554dKPR2\n63LpMvBxTRtCjzyALHwgYiaAtw+7t168oktkvj3Wp6C9G7A4wXDOhZn0G0Vau1yA\n31re5jZtAgMBAAECggEAIL5q0+5gWI4jwQIchO4uKB297JoSb99H9QEINZLOrf11\nqlr7HCckCP+0YCs+vh5miQTpzRB+h1AXR2zEUua7iGngO9vz+Ff/2oZNjsdqDkIg\nMXyOmFfRprqLS7e/zbWbiChE/BVbUjSYRJCRolkCtTgT4JCMa+Ppsi5KZsvX0Jrh\nGG+IXdnG92jEn/ryOG4jO3YuZmqmRMgeTagPewiKhqcOJWDClpCveoHkDbMUZ9T9\n2jfF70+b8ZS/3XwZHkeXKlA36bXu1T3MOl602tqafgaN9oyYoRnmd5KL1Cq6lX9q\nTR0iNbf+qmqH+o31ZtB/a2rCZOZtQj2zT/gpjqPxSQKBgQD1wRCgCV6gr4R2jQNv\nmWF1qUX45Bx6W0bIWrJCV9L8lu7zK1JixH4QSAY9ZZeajZvlgfwlapWPP1L89Is7\n5Z49IWg1R22ojX3NxuVwQq5IzjdLbAjRO4IfELSSJdbLkjvl7iuBw5etEUlGdd6F\nnlbINUtuDhJxJ308lE4zcy9glQKBgQDY+Jbfzd/S5emC0SCUx6rg9++3UZJfOPMp\nezdSY303TRBODGVJNH6yiy6FbnkgZw+pcxDucmms99niHs/QgF2Vl9BSLF9QrgK3\nHfnw8ehBLJj9U01+oDwf9hpqQFyw9vLAkn7hQ2t++drBZO1k07r94MpcglslP9Km\nlQkH/kdQeQKBgAhay+nk56am0OYG3TsKB9osKwjPGHjAaaOeEblXqwCTUQRLUL2y\n2GZNTIkBzymd7tLanGvZN8Rq7rNSzPj4UWzameRVzVCRntlEDcDHQ42OFSsnPRV/\n5GiR9NGTH75D9m1Wr3v13k4v7EHM+Aeq3mBoD2xqZg4avZM1p4LwQ4gRAoGBANTw\nTCpDw9oYeG9BzScXOpZl3qbccLnxi3v3iJjcOWTPxiPDOJh646lYvYSIomnxm8Zi\nvog2U45FBVpNgQkRIkeRYgtzruvgi5up2MXmtFlaap+cZN7UZY28m7oRhqbLBf2H\nCO0NnO9WSaIp6m5c+hT1y8S0zr0lARkqBV4J6XWJAoGAOx1mwC+UWIBkDbB1Df6O\nOtpcoDUqt4qLULci6VI0iq+nKpBcKvaw7HMA7X6bFtH4wygk5jEBpfrhpoc55XaT\nnMLlnZHkAUvbP3nvCD39QPoKgq6g5dHWPoIF5JrG995NzJkkgTR2o+2T3rep3EuV\nJUylT1V2/13xA08ODJOnbuU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-credentials-json@asistente-voz-boletas.iam.gserviceaccount.com",
+  "client_id": "115685764445268977763",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-credentials-json%40asistente-voz-boletas.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
