@@ -3,7 +3,31 @@ const { transcribeAudio } = require('../services/voiceService');
 const invoiceController = require('./invoiceController');
 const {analyzeText} =require('../services/nlpService'); // servicio para enviar texto al modelo NLP
 const {validateProductsFromDatabase} = require('../services/databaseService');// Servicio para validar productos
+const multer =require('multer');
+const path = require('path');
+
+//Crear el directorio 'uploads/' si no existe
+
+const uploadDir =path.join(__dirname, '..','uploads');
+if(!fs.existsSync(uploadDir)){
+    fs.mkdirSync(uploadDir,{recursive:true}); // crea el directorio si no existe 
+}
+
+
+// Configuración de Multer para manejar la subida de archivos
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadDir); // Carpeta donde se guardarán los archivos de audio
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}-${file.originalname}`);
+    },
+});
  
+const upload = multer({ storage });
+ 
+// Exportar el middleware
+exports.uploadMiddleware = upload.single('file'); //Nombre del campo esperado: "file"
 
 //Controlador principal para procesar comandos de voz
 exports.processVoiceCommand = async (req, res) => {
@@ -25,7 +49,7 @@ exports.processVoiceCommand = async (req, res) => {
         console.log('Entidades extraídas por NLP: ',entities);
 
         //Validar y mapear entidades extraídas
-        const { products, clientInfo } = await paseEntities(entities);
+        const { products, clientInfo } = await parseEntities(entities);
 
 
         // Llamar al controlador para crear la factura
@@ -75,6 +99,7 @@ const parseEntities = async (entities) => {
         return { products, clientInfo };
     } catch (error) {
         console.error('Error al procesar entidades:', error.message);
+        fs.unlinkSync(audioFile.path);
         throw error;
     }
 };

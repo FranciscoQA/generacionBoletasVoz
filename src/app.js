@@ -33,7 +33,7 @@ app.use('/api/invoices', invoiceRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/sunat-sync', sunatSyncRoutes);
 app.use('/api/invoices/details/',invoiceRoutes);
-app.use('/api/voice-command',upload.single('audio')); // Agregar middlewarte para la ruta especifica
+// app.use('/api/voice-command',upload.single('audio')); // Agregar middlewarte para la ruta especifica
 app.use('/api/voice',voicesRoutes);
 
 
